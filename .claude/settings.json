@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./hack/spec_metadata.sh)",
+      "Bash(hack/spec_metadata.sh)",
+      "Bash(bash hack/spec_metadata.sh)",
+      "Bash(make lint-check:*)",
+      "Bash(make lint:*)",
+      "Bash(python -m pytest tests/unit/test_utils.py::test_has_python_changes_with_python_file_changes_returns_true -v)",
+      "Bash(python -m pytest tests/unit/test_utils.py -k \"has_python_changes or count_added_lines or filter_file_changes_by_added_lines\" -v)",
+      "Bash(python -m pytest tests/unit/test_utils.py -v)",
+      "Bash(find:*)",
+      "Bash(python -m pytest tests/unit/ -x --tb=short)",
+      "WebFetch(domain:modelcontextprotocol.io)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(make:*)",
+      "Bash(uv lock:*)",
+      "Bash(python:*)",
+      "MCP(*)",
+      "mcp__github__search_pull_requests",
+      "mcp__linear-server__get_issue",
+      "Bash(git checkout:*)",
+      "WebFetch(domain:shields.io)",
+      "WebFetch(domain:img.shields.io)",
+      "Bash(ENV=dev python -m alembic revision --autogenerate -m \"Change github_comment_id to BigInteger\")",
+      "Bash(ENV=dev python -m alembic upgrade head)",
+      "Bash(ENV=dev python -m alembic revision --autogenerate -m \"Add CommentInteractionState table and UNRESOLVE_COMMENT enum\")",
+      "Bash(ENV=dev python -m alembic revision --autogenerate -m \"Add GitHub auth fields to InteractionToken for fast badge updates\")",
+      "WebSearch",
+      "WebFetch(domain:e2b.dev)",
+      "WebFetch(domain:github.com)",
+      "Bash(ruff format:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": false
+}
